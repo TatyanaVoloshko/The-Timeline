@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <title>The Timeline</title>
+  </head>
+  <body>
+    <div class="container">
+       <header class="header">
+         <div class="nav">
+          <span class="material-symbols-outlined nav-icon">
+            arrow_left_alt
+          </span>
+          <span class="material-symbols-outlined nav-icon">
+            arrow_right_alt
+          </span>
+          <span class="material-symbols-outlined nav-icon"> close </span>
+          <span class="material-symbols-outlined"> home </span>
+          <form>
+            <input type="text" class="input" />
+            <button class="btn-search" id="btn-search">
+              <span class="material-symbols-outlined search"> search </span>
+            </button>
+          </form>
+        </div>
+       </header>
+        <main class="main">
+   <h1><%= message %></h1>
+   <hr>
+    <ul>
+      <% items.forEach(function(item) { %>
+      <li> 
+          <p><%= item.name %> - <%= item.createdAt %></p>
+          
+          <p class="message"><%= item.message %></p>
+        </li>
+      <% }); %>
+    </ul>
+        </main>
+        <footer class="footer">
+        <p>//</p>
+      </footer>
+    </div>
+   
+  </body>
+</html>
+
