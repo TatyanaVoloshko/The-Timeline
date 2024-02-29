@@ -12,27 +12,9 @@
   </head>
   <body>
     <div class="container">
-       <header class="header">
-         <div class="nav">
-          <span class="material-symbols-outlined nav-icon">
-            arrow_left_alt
-          </span>
-          <span class="material-symbols-outlined nav-icon">
-            arrow_right_alt
-          </span>
-          <span class="material-symbols-outlined nav-icon"> close </span>
-          <span class="material-symbols-outlined"> home </span>
-          <form>
-            <input type="text" class="input" />
-            <button class="btn-search" id="btn-search">
-              <span class="material-symbols-outlined search"> search </span>
-            </button>
-          </form>
-        </div>
-       </header>
-        <main class="main">
+    <%- include('header') -%>
    <h1><%= message %></h1>
-   <hr>
+   <main class="main">
     <ul>
       <% items.forEach(function(item) { %>
       <li> 
@@ -43,9 +25,7 @@
       <% }); %>
     </ul>
         </main>
-        <footer class="footer">
-        <p>//</p>
-      </footer>
+       <%- include('footer') -%> 
     </div>
    
   </body>

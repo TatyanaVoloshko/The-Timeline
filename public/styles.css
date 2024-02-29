@@ -98,6 +98,7 @@ form {
   font-size: 24px;
 }
 
+
 .main {
     padding: 40px 50px 30px;
     display: flex;
@@ -108,8 +109,12 @@ form {
 
 }
 
-.main h1 {
+ h1 {
+  padding: 7px;
     font-size: 24px;
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+    border-left: 4px solid black;
 }
 
 .main li:not(:last-child) {

@@ -35,7 +35,14 @@ app.get("/", (req, res) => {
             "This is my message    This is my message This is my message This is my messageThis is my message This is my message    This is my message This is my message This is my messageThis is my message",
         },
       ],
-    };
+  };
+  
+   data.items.sort((a, b) => {
+     const dateA = a.createdAt.split("-").reverse().join("-");
+     const dateB = b.createdAt.split("-").reverse().join("-");
+     return new Date(dateB) - new Date(dateA);
+   });
+
      res.render("index", data);
 });
 
