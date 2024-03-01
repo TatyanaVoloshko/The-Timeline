@@ -1,10 +1,9 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: cursive;
-    font-weight: 700;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+  font-weight: 700;
 }
 
 ul {
@@ -12,133 +11,140 @@ ul {
 }
 
 .container {
-   width: 75%; 
-   max-width: 1000px;
-   margin-right: auto;
-   margin-left: auto;
-
+  width: 75%;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    padding: 10px 20px 30px;
-    background-color:rgb(186, 184, 182);
-    border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 20px 30px;
+  background-color: rgb(186, 184, 182);
+  border: 5px solid black;
 }
-
 
 .nav {
-    width: 100%;
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
 }
 
-
-
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 700,
-  'GRAD' 0,
-  'opsz' 24;
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
   font-size: 48px;
 }
 
-form {
-    display: flex;
-    gap: 10px;
+header form {
+  display: flex;
+  gap: 10px;
 }
 
 .input {
-    width: 400px;
-    height: 40px;
-    padding: 3px;
-    border: 4px solid black;
-    color: black;
-    font-size: 24px;
-    border-radius: 5px;
+  width: 400px;
+  height: 40px;
+  padding: 3px;
+  border: 4px solid black;
+  color: black;
+  font-size: 24px;
+  border-radius: 5px;
 }
 
- @media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .input {
     width: 70%;
   }
 
   .btn-search {
-        width: 50%;
-    }
+    width: 50%;
+  }
 
-    .material-symbols-outlined {
-  font-size: 36px;
-}
+  .material-symbols-outlined {
+    font-size: 36px;
   }
+}
 @media screen and (max-width: 350px) {
-  
-    .material-symbols-outlined {
-  font-size: 24px;
-}
+  .material-symbols-outlined {
+    font-size: 24px;
   }
+}
 
 .btn-search {
-    width: 90px;
-    height: 45px;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border: 4px solid black;
+  width: 90px;
+  height: 45px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 4px solid black;
 }
 
 .search {
   font-size: 24px;
 }
 
-
 .main {
-    padding: 40px 50px 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border-left: 4px solid black;
-    border-right: 4px solid black
-
+  padding: 40px 50px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
 }
 
- h1 {
+.main-form {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  font-weight: 600;
+  color: rgb(63, 63, 63);
+}
+
+main button {
+  width: 120px;
+  height: 30px;
+  margin-left: auto;
+  margin-top: 5px;
+  background-color: rgb(15, 91, 163);
+  color: #fff;
+  border: 1px solid black;
+  box-shadow: 4px 4px black;
+}
+
+h1 {
   padding: 7px;
-    font-size: 24px;
-    border-bottom: 4px solid black;
-    border-right: 4px solid black;
-    border-left: 4px solid black;
+  font-size: 24px;
+  border-bottom: 4px solid black;
+  border-right: 4px solid black;
+  border-left: 4px solid black;
 }
 
 .main li:not(:last-child) {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .main p {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .message {
-    padding-left: 15px;
+  padding-left: 15px;
 }
-
 
 .footer {
-    display: flex;
-    align-items: end;
-    justify-content: end;
-   height: 40px;
-   background-color: rgb(186, 184, 182);
-   border: 4px solid black;
-   font-size: 24px; 
-   font-weight:bold
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  height: 40px;
+  background-color: rgb(186, 184, 182);
+  border: 4px solid black;
+  font-size: 24px;
+  font-weight: bold;
 }
-
-
