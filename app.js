@@ -11,9 +11,11 @@ const dbConnect = require('./utils/dbConnect')
 dbConnect();
 
 const getRoute = require("./routes/getRoute");
-const neMessageRoute = require("./routes/newMessageRoute")
+const newMessageRoute = require("./routes/newMessageRoute")
+const commentRoute = require('./routes/commentRoute')
 app.use("/", getRoute);
-app.use("/newMessage", neMessageRoute)
+app.use("/newMessage", newMessageRoute)
+app.use('/comment', commentRoute)
 
 
 app.listen(port, () => {

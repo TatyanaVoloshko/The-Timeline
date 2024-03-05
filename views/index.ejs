@@ -22,6 +22,27 @@
           <p><%= item.name %> - <%= item.createdAt %></p>
           
           <p class="message"><%= item.message %></p>
+
+           <div class="comments">
+                <strong>Comments:</strong>
+                <ul>
+                  <% item.comments.forEach(function(comment) { %>
+                    <li>
+                      <p><%= comment.name %> - <%= comment.createdAt %></p>
+                      <p><%= comment.comment %></p>
+                    </li>
+                  <% }); %>
+                </ul>
+                <form action="/comment/newComment" method="post" class="main-form">
+  <input type="hidden" name="postId" value="<%= item._id %>">
+  <input type="text" name="name" required>
+  <input type="text" name="createdAt" required>
+  <textarea name="comment" rows="4" required></textarea>
+  <button type="submit" class="comment-btn">Add Comment</button>
+</form>
+            </div>
+
+
         </li>
       <% }); %>
     </ul>
