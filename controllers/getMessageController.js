@@ -20,17 +20,13 @@ async function getMessages(req, res) {
 async function getPost(req, res) {
   try {
     const postId = req.params.postId;
-    console.log(postId)
     const post = await Message.findById(postId)
       
 
     if (!post) {
-      // Обработка ситуации, когда пост не найден
       return res.status(404).send("Post not found");
     }
 
-    
-    // Отправка поста на страницу
     res.render("index", { message: "Post", items: [post] });
   } catch (error) {
     console.error(error);
