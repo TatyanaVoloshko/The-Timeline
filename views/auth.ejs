@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth page</title>
+</head>
+<body>
+  <div>
+    <h3>Sign up</h3>
+<form action="/auth/signup-user" method="post">
+  <input type="text" name="username" placeholder="Uername">
+  <input type="email" name="email" placeholder="Email" autocomplete="username">
+  <input type="password" name="password" placeholder="Password" autocomplete="new-password">
+  <input type="password" name="confimPassword" placeholder="Confim Password" autocomplete="new-password">
+  <button type="submit">Sign up</button>
+</form>
+<h3><%= err %></h3>
+  </div>
+  <div>
+ <h3>Sign in</h3>
+<form action="/auth/login-user" method="post">
+  <input type="email" name="email" placeholder="Email" autocomplete="username">
+  <input type="password" name="password" placeholder="Password" autocomplete="new-password">
+  <button>Sign in</button>
+</form>
+<h3><%= loginErr %></h3>
+  </div>
+   
+</body>
+</html>

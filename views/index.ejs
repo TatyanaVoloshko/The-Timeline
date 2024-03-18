@@ -12,6 +12,13 @@
   </head>
   <body>
     <div class="container">
+      <div class="logOut">
+        <h2>Welcome <%= username %> </h2>
+        <form action="/auth/logOut" method="get">
+          <button type="submit" class="logout-btn">LogOut</button>
+        </form>
+        
+      </div>
     <%- include('header') -%>
    <h1><%= message %></h1>
    <main class="main">

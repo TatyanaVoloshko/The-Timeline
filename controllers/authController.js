@@ -1,5 +1,7 @@
 const userModel = require('../models/userModel')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
+
 
 const renderLoginPage = (req, res) => {
     res.render("auth", {
@@ -78,15 +80,25 @@ const login = async (req, res) => {
                     err: ""
                 });
             } else {
-            //    next step with JWT
+                const userInfo = {
+                    username: existUser.username,
+                    email: existUser.email
+                }
+                const token = jwt.sign({ userInfo }, "a1a2a3")
+                res.cookie('token', token)
                 res.redirect('/')
             }
         }
     }
 }
 
+const logOut = (req, res) => {
+    res.clearCookie('token')
+    res.redirect("/auth/auth");
+}
 module.exports = {
     renderLoginPage,
     signup, 
-    login
+    login,
+    logOut
 }

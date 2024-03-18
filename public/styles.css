@@ -17,6 +17,25 @@ ul {
   margin-left: auto;
 }
 
+.logOut {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.logout-btn {
+   width: 60px;
+  height: 30px;
+  margin-left: auto;
+  margin-top: 5px;
+  background-color: rgb(15, 91, 163);
+  color: #fff;
+  border: 1px solid black;
+  box-shadow: 4px 4px black;
+}
+
 .header {
   display: flex;
   flex-direction: column;
